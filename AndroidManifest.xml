@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="interdroid.lifediary" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".LifeDiaryPreferences" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".LifeDiaryCalendar" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".LifeDiaryDay" android:label="@string/app_name">
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<service android:name=".LifeDiaryService">
+			<intent-filter>
+				<action android:name="interdroid.lifediary.CONTEXT_SERVICE" />
+			</intent-filter>
+		</service>
+
+		<service android:name=".sensors.MoodSensor" android:exported="true"
+			android:process=":moodsensor">
+			<meta-data android:name="entityId" android:value="mood" />
+			<!-- TODO: Make these come from a string array resource instead. -->
+			<meta-data android:name="valuePaths" android:value="mood" />
+			<intent-filter>
+				<action android:name="interdroid.contextdroid.sensor.DISCOVER" />
+			</intent-filter>
+		</service>
+		<provider android:name=".sensors.MoodSensor$Provider"
+			android:authorities="interdroid.lifediary.mood" />
+		<receiver android:name=".sensors.MoodSensor$WidgetProvider">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/mood_widget_info" />
+		</receiver>
+		<activity android:name=".sensors.MoodSensor$WidgetReceiver"
+			android:label="Mood">
+			<intent-filter>
+				<action android:name="android.intent.action.PICK" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data
+					android:mimeType="vnd.android.cursor.dir/vnd.interdroid.contextdroid.sensor.mood.mood" />
+			</intent-filter>
+		</activity>
+	</application>
+
+
+	<uses-permission android:name="interdroid.vdb.permission.READ_DATABASE" />
+	<uses-permission android:name="interdroid.vdb.permission.WRITE_DATABASE" />
+</manifest>

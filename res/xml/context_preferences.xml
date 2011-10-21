@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/context_preferences">
+		<CheckBoxPreference android:name="batterySensorEnabled"
+			android:title="@string/pref_battery_enabled" android:defaultValue="false"
+			android:summary="@string/pref_battery_enabled_desc" android:key="battery/level"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="bluetoothSensorEnabled"
+			android:title="@string/pref_bluetooth_enabled" android:defaultValue="false"
+			android:summary="@string/pref_bluetooth_enabled_desc" android:key="bluetooth/name"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="callSensorEnabled"
+			android:title="@string/pref_call_enabled" android:defaultValue="false"
+			android:summary="@string/pref_call_enabled_desc" android:key="call/call_state"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="locationSensorEnabled"
+			android:title="@string/pref_location_enabled" android:defaultValue="false"
+			android:summary="@string/pref_location_enabled_desc" android:key="location/speed"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="screenSensorEnabled"
+			android:title="@string/pref_screen_enabled" android:defaultValue="false"
+			android:summary="@string/pref_screen_enabled_desc" android:key="screen/is_screen_on"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="signalSensorEnabled"
+			android:title="@string/pref_signal_enabled" android:defaultValue="false"
+			android:summary="@string/pref_signal_enabled_desc" android:key="signal/gsm_signal_strength"
+			android:persistent="true" />
+		<CheckBoxPreference android:name="wifiSensorEnabled"
+			android:title="@string/pref_wifi_enabled" android:defaultValue="false"
+			android:summary="@string/pref_wifi_enabled_desc" android:key="wifi/ssid"
+			android:persistent="true" />
+	</PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<LinearLayout android:id="@+id/linearLayout1"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<ImageButton android:maxWidth="72dp" android:maxHeight="72dp"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:src="@drawable/mood_unknown" android:id="@+id/mood_button"
+		android:layout_width="wrap_content"
+		android:background="@android:color/transparent"
+		>
+	</ImageButton>
+	<TextView android:layout_height="wrap_content"
+		android:gravity="center" android:text="@string/mood_unknown"
+		android:id="@+id/mood_label" android:layout_width="wrap_content" android:layout_gravity="center_vertical">
+	</TextView>
+
+</LinearLayout>

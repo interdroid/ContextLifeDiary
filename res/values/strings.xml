@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Life Diary</string>
+	<string name="mood_unknown">Unknown</string>
+	<string name="title_mood">Current Mood</string>
+
+	<string name="context_preferences">Context Preferences</string>
+	<string name="pref_battery_enabled">Battery Sensor</string>
+	<string name="pref_battery_enabled_desc">Enables the battery level sensor</string>
+	<string name="pref_bluetooth_enabled">Bluetooth Sensor</string>
+	<string name="pref_bluetooth_enabled_desc">Enables the bluetooth sensor. Only works when bluetooth is on.</string>
+	<string name="pref_call_enabled">Call Sensor</string>
+	<string name="pref_call_enabled_desc">Enables the call sensor.</string>
+	<string name="pref_location_enabled">GPS Sensor</string>
+	<string name="pref_location_enabled_desc">Enables the GPS sensor.</string>
+	<string name="pref_screen_enabled">Screen Sensor</string>
+	<string name="pref_screen_enabled_desc">Enables the screen sensor. Prevents phone from sleeping, so drains battery significantly.</string>
+	<string name="pref_signal_enabled">Signal Strength Sensor</string>
+	<string name="pref_signal_enabled_desc">Enables the signal strength sensor.</string>
+	<string name="pref_wifi_enabled">WiFi Sensor</string>
+	<string name="pref_wifi_enabled_desc">Enables the wifi sensor. Note: Logs all networks seen which may reveal your location.</string>
+
+	<string name="label_loading">Loading...</string>
+	<string name="label_wait">Thanks For Waiting...</string>
+</resources>

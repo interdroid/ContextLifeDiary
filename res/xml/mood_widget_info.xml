@@ -1,0 +1,5 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+	android:minWidth="220dp" android:minHeight="72dp"
+	android:updatePeriodMillis="900000"
+	android:initialLayout="@layout/mood_widget">
+</appwidget-provider>
