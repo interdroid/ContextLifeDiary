@@ -19,7 +19,10 @@
 	<string name="pref_signal_enabled_desc">Enables the signal strength sensor.</string>
 	<string name="pref_wifi_enabled">WiFi Sensor</string>
 	<string name="pref_wifi_enabled_desc">Enables the wifi sensor. Note: Logs all networks seen which may reveal your location.</string>
+	<string name="pref_polar_hrm_enabled">Polar Heart Rate Senso</string>
+	<string name="pref_polar_hrm_enabled_desc">Enables the Polar Heart Rate Monitor. Note, you must Pair with your device in Bluetooth preferences first.</string>
 
 	<string name="label_loading">Loading...</string>
 	<string name="label_wait">Thanks For Waiting...</string>
+	<string name="label_prefs">Preferences</string>
 </resources>

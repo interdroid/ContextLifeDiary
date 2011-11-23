@@ -29,5 +29,9 @@
 			android:title="@string/pref_wifi_enabled" android:defaultValue="false"
 			android:summary="@string/pref_wifi_enabled_desc" android:key="wifi/ssid"
 			android:persistent="true" />
+		<CheckBoxPreference android:name="polarHRMSensorEnabled"
+			android:title="@string/pref_polar_hrm_enabled" android:defaultValue="false"
+			android:summary="@string/pref_polar_hrm_enabled_desc" android:key="polar_hrm/bpm"
+			android:persistent="true" />
 	</PreferenceCategory>
 </PreferenceScreen>

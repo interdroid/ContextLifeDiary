@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class LifeDiaryCalendar extends CalendarActivity {
 	/**
@@ -15,6 +17,7 @@ public class LifeDiaryCalendar extends CalendarActivity {
 	 */
 	private static final Logger LOG =
 			LoggerFactory.getLogger(LifeDiaryCalendar.class);
+	private static final int	MENU_ITEM_PREFS	= 0;
 
 	@Override
 	public void onCreate(Bundle saved) {
@@ -30,7 +33,7 @@ public class LifeDiaryCalendar extends CalendarActivity {
 
 		});
 	}
-	
+
 	/**
 	 * Start the day view activity.
 	 * @param day the day to view
@@ -48,6 +51,29 @@ public class LifeDiaryCalendar extends CalendarActivity {
 		dayIntent.putExtra(LifeDiaryDay.EXTRA_MONTH, month);
 		dayIntent.putExtra(LifeDiaryDay.EXTRA_YEAR, year);
 		startActivity(dayIntent);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+
+		menu.add(0, MENU_ITEM_PREFS, 0, getString(R.string.label_prefs))
+		.setShortcut('1', 'p')
+		.setIcon(android.R.drawable.ic_menu_preferences);
+
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		boolean ret = false;
+		if (item.getItemId() == MENU_ITEM_PREFS) {
+			Intent prefsIntent = new Intent(this, LifeDiaryPreferences.class);
+			startActivity(prefsIntent);
+			ret = true;
+		}
+
+		return super.onOptionsItemSelected(item);
 	}
 
 }

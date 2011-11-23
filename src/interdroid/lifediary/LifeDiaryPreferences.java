@@ -23,7 +23,7 @@ public class LifeDiaryPreferences extends PreferenceActivity {
 	public static final String[] serviceKeys = {
 		"battery/level", "bluetooth/name", "call/call_state",
 		"location/speed", "screen/is_screen_on", "signal/gsm_signal_strength",
-		"wifi/ssid"
+		"wifi/ssid", "polar_hrm/bpm"
 	};
 
 	@Override

@@ -4,7 +4,7 @@ import interdroid.contextdroid.ConnectionListener;
 import interdroid.contextdroid.ContextDroidException;
 import interdroid.contextdroid.ContextManager;
 import interdroid.contextdroid.contextexpressions.ContextTypedValue;
-import interdroid.contextdroid.contextexpressions.TypedValue.HistoryReductionMode;
+import interdroid.contextdroid.contextexpressions.HistoryReductionMode;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,10 +64,12 @@ public class LifeDiaryService extends Service {
 	class LooperThread extends Thread {
 		public Handler mHandler;
 
+		@Override
 		public void run() {
 			Looper.prepare();
 
 			mHandler = new Handler() {
+				@Override
 				public void handleMessage(Message msg) {
 					String key = (String) msg.obj;
 					LOG.debug("Handling toggle of: {}", key);
@@ -174,8 +176,7 @@ public class LifeDiaryService extends Service {
 	private void registerListener(String key) {
 		LOG.debug("Register: {}", key);
 
-		final ContextTypedValue left = new ContextTypedValue(key,
-				HistoryReductionMode.NONE, 500);
+		final ContextTypedValue left = new ContextTypedValue(key);
 
 		System.out.println("registering expression");
 		try {

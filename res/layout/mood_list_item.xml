@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="horizontal" android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
 
 	<ImageView android:maxWidth="36dp" android:maxHeight="36dp" android:scaleType="matrix"
 		android:layout_weight="0" android:id="@+id/mood_image" android:src="@drawable/mood_unknown"
