@@ -147,7 +147,7 @@ public class MoodSensor extends AbstractVdbSensor {
 			long expire = now + DEFAULT_EXPIRE;
 
 			MoodSensor.putValues(resolver,
-					URI, values, now, expire);
+					URI, values, now);
 
             WidgetProvider.forceUpdate(this);
 			finish();
@@ -242,7 +242,7 @@ public class MoodSensor extends AbstractVdbSensor {
 			try {
 				moodCursor = MoodSensor.getValuesCursor(context,
 						URI, new String[] {MOOD_FIELD, MOOD_ID_FIELD},
-						System.currentTimeMillis(), 0L);
+						System.currentTimeMillis(), 0L, null);
 				LOG.debug("Got cursor: {} {}",
 						moodCursor.getCount(), moodCursor);
 				views.setImageViewResource(R.id.mood_button,
